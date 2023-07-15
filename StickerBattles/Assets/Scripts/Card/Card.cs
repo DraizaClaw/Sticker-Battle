@@ -16,7 +16,7 @@ using UnityEngine;
 
 
 
-public class Card : MonoBehaviour
+public class Card
 {
     public int id;
     public int health;
@@ -26,13 +26,14 @@ public class Card : MonoBehaviour
     public string carddescription;
     public string magic;
     public string magicdescription;
+    public Sprite spriteImage;
 
     public Card()
     {
 
     }
 
-    public Card(int Id,int Health,int Attack,int Defence,string CardName, string CardDescription, string Magic, string MagicDescription)
+    public Card(int Id,int Health,int Attack,int Defence,string CardName, string CardDescription, string Magic, string MagicDescription, Sprite SpriteImage)
     {
         id = Id;
         health = Health;
@@ -42,6 +43,7 @@ public class Card : MonoBehaviour
         carddescription = CardDescription;
         magic = Magic;
         magicdescription = MagicDescription;
+        spriteImage = SpriteImage;
     }
 
 
