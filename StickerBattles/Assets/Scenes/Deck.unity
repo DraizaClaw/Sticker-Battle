@@ -133,6 +133,19 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6462568037849127813, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
   m_PrefabInstance: {fileID: 1702997800}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &19535493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19535491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4029b3ac628aa514fac50a91deab94ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CardBack: {fileID: 8907361221237343182, guid: a446d0c6b5c566844a7fc242edda03c1, type: 3}
 --- !u!1 &54084206 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 215986763953085991, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
@@ -143,6 +156,19 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6462568037849127813, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
   m_PrefabInstance: {fileID: 1386855017}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &54084208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54084206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4029b3ac628aa514fac50a91deab94ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CardBack: {fileID: 8907361221237343182, guid: a446d0c6b5c566844a7fc242edda03c1, type: 3}
 --- !u!1 &66473675
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,7 +447,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 222170385}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 764853009}
+        m_TargetAssemblyTypeName: TurnSystem, Assembly-CSharp
+        m_MethodName: EndOpponentTurn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &222170385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -721,7 +759,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 494266941}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 764853009}
+        m_TargetAssemblyTypeName: TurnSystem, Assembly-CSharp
+        m_MethodName: EndYourTurn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &494266941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -947,6 +997,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 720265628}
   m_CullTransparentMesh: 1
+--- !u!1 &764853008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 764853010}
+  - component: {fileID: 764853009}
+  m_Layer: 0
+  m_Name: TurnSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &764853009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764853008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ac309de8cd0bce4ba9be16d75a61c33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsYourTurn: 0
+  YourTurn: 0
+  OpponentTurn: 0
+  TurnText: {fileID: 1646460457}
+  maxmana: 0
+  currentmana: 0
+  manatext: {fileID: 1716177522}
+--- !u!4 &764853010
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764853008}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 434.85754, y: 208.99951, z: -3.30559}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &787872877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -958,6 +1059,14 @@ PrefabInstance:
     - target: {fileID: 215986763953085991, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
       propertyPath: m_Name
       value: Card (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2657275209282503396, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198608059606296553, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6462568037849127813, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
       propertyPath: m_Pivot.x
@@ -1046,7 +1155,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 215986763953085991, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1782124428}
   m_SourcePrefab: {fileID: 100100000, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
 --- !u!1 &875695594
 GameObject:
@@ -1146,6 +1258,7 @@ RectTransform:
   - {fileID: 615259148}
   - {fileID: 66473676}
   - {fileID: 1418035125}
+  - {fileID: 1716177524}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1314,6 +1427,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Card (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2657275209282503396, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198608059606296553, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6462568037849127813, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1401,7 +1522,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 215986763953085991, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 54084208}
   m_SourcePrefab: {fileID: 100100000, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
 --- !u!1 &1414804487
 GameObject:
@@ -1997,6 +2121,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Card (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2657275209282503396, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198608059606296553, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6462568037849127813, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2084,8 +2216,91 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 215986763953085991, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 19535493}
   m_SourcePrefab: {fileID: 100100000, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
+--- !u!1 &1716177521
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1716177524}
+  - component: {fileID: 1716177523}
+  - component: {fileID: 1716177522}
+  m_Layer: 5
+  m_Name: ManaText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1716177522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716177521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 50
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 50
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Your 'mana' is at 000
+--- !u!222 &1716177523
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716177521}
+  m_CullTransparentMesh: 1
+--- !u!224 &1716177524
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716177521}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 875695598}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 230.22, y: -106.3747}
+  m_SizeDelta: {x: 460.44, y: 110.2707}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1753522948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2098,6 +2313,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Card (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2657275209282503396, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198608059606296553, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6462568037849127813, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2185,7 +2408,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 215986763953085991, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2002855573}
   m_SourcePrefab: {fileID: 100100000, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
 --- !u!1 &1782124426 stripped
 GameObject:
@@ -2197,6 +2423,19 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6462568037849127813, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
   m_PrefabInstance: {fileID: 787872877}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1782124428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782124426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4029b3ac628aa514fac50a91deab94ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CardBack: {fileID: 8907361221237343182, guid: a446d0c6b5c566844a7fc242edda03c1, type: 3}
 --- !u!1 &2002855567 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 215986763953085991, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
@@ -2207,6 +2446,19 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6462568037849127813, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
   m_PrefabInstance: {fileID: 1753522948}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2002855573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002855567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4029b3ac628aa514fac50a91deab94ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CardBack: {fileID: 8907361221237343182, guid: a446d0c6b5c566844a7fc242edda03c1, type: 3}
 --- !u!1 &2014844908
 GameObject:
   m_ObjectHideFlags: 0
