@@ -5,9 +5,10 @@ using UnityEngine;
 public class PlayerDeck : MonoBehaviour
 {
     public List<Card> container = new List<Card>();
-    public int DeckSize;
+    public static int DeckSize;
     public int x;
     public List<Card> deck = new List<Card>();
+    public static List<Card> staticdeck = new List<Card>();
 
 
 
@@ -18,8 +19,9 @@ public class PlayerDeck : MonoBehaviour
 
 
 
-
-
+    public GameObject CardToHand;
+    public GameObject[] Clones;
+    public GameObject Hand;
 
 
 
@@ -31,17 +33,30 @@ public class PlayerDeck : MonoBehaviour
     void Start()
     {
         x = 0;
-
+        DeckSize = 40;
         for (int i = 0; i < DeckSize; i++)
         {
             x = Random.Range(1, 4);
             deck[i] = CardDatabase.cardlist[x];
         }
+
+
+
+
+        StartCoroutine(StartGame());
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        staticdeck = deck;
+
+
+
+
 
 
 
@@ -81,6 +96,27 @@ public class PlayerDeck : MonoBehaviour
 
 
     }
+
+
+
+
+    IEnumerator StartGame()
+    {
+        for (int i = 1; i < 5; i++)
+        {
+            yield return new WaitForSeconds(1);
+            //new //again for some reason
+            Instantiate(CardToHand, transform.position, transform.rotation);
+        }
+    }
+
+
+
+
+
+
+
+
 
     public void Shuffle()
     {
