@@ -10,7 +10,9 @@ public class TurnSystem : MonoBehaviour
     public int OpponentTurn;
     public Text TurnText;
 
-    public int maxmana; //used in tutorial but useless in my code
+
+//    public int maxmana; //used in tutorial but useless in my code so imma commment it out
+
     public int currentmana;
     public Text manatext;
 

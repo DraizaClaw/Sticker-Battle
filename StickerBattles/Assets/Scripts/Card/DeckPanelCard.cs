@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DeckPanelCard : MonoBehaviour
 {
-    public GameObject CardBack;
+    [SerializeField] private GameObject CardBack;
 
 
     private void Update()
