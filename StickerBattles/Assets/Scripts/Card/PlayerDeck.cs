@@ -36,7 +36,7 @@ public class PlayerDeck : MonoBehaviour
         DeckSize = 40;
         for (int i = 0; i < DeckSize; i++)
         {
-            x = Random.Range(1, 4);
+            x = Random.Range(1, 20);
             deck[i] = CardDatabase.cardlist[x];
         }
 
