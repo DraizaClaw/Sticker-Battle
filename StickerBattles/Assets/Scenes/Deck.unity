@@ -1152,7 +1152,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2657275209282503396, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
+    - {fileID: 3198608059606296553, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -1519,7 +1521,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2657275209282503396, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
+    - {fileID: 3198608059606296553, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -1950,6 +1954,7 @@ MonoBehaviour:
   CardToHand: {fileID: 215986763953085991, guid: 31a7cf653eefc8b41a07806fb91ff8f1, type: 3}
   Clones: []
   Hand: {fileID: 66473675}
+  handcards: 5
 --- !u!1 &1418035124
 GameObject:
   m_ObjectHideFlags: 0
@@ -2213,7 +2218,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2657275209282503396, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
+    - {fileID: 3198608059606296553, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -2405,7 +2412,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2657275209282503396, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
+    - {fileID: 3198608059606296553, guid: dfbbc07130cb4f24e91879c998f0dcad, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
