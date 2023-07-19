@@ -24,7 +24,7 @@ public class PlayerDeck : MonoBehaviour
     public GameObject Hand;
 
 
-
+    [SerializeField] private int handcards;
 
 
 
@@ -106,7 +106,7 @@ public class PlayerDeck : MonoBehaviour
 
     IEnumerator StartGame()
     {
-        for (int i = 1; i < 5; i++)
+        for (int i = 1; i < handcards + 1; i++) //code to control how many cards are in hand at the beggining of game 
         {
             yield return new WaitForSeconds(1);
             //new //again for some reason

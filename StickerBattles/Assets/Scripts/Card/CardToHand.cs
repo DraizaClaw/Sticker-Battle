@@ -5,15 +5,9 @@ using UnityEngine;
 public class CardToHand : MonoBehaviour
 {
 
-    public GameObject Hand;
+    [HideInInspector] public GameObject Hand; //in tutorial it wasnt hide and was public
     public GameObject HandCard;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
