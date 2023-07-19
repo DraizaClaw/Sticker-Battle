@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class TurnSystem : MonoBehaviour
 {
-
+    //i need to test if there is a point to keeping them public, if yes then make sure there is a point in keeping them editable from unity
     public bool IsYourTurn;
     public int YourTurn;
     public int OpponentTurn;

@@ -6,16 +6,19 @@ public class PlayerDeck : MonoBehaviour
 {
     public List<Card> container = new List<Card>();
     public static int DeckSize;
-    public int x;
+    private int x; //was pulic  now private, if error presits try making this public again
     public List<Card> deck = new List<Card>();
     public static List<Card> staticdeck = new List<Card>();
 
 
 
-    public GameObject cardInDeck1;
-    public GameObject cardInDeck2;
-    public GameObject cardInDeck3;
-    public GameObject cardInDeck4;
+    [SerializeField] private GameObject cardInDeck0;
+    [SerializeField] private GameObject cardInDeck1;
+    [SerializeField] private GameObject cardInDeck2;
+    [SerializeField] private GameObject cardInDeck3;
+    [SerializeField] private GameObject cardInDeck4;
+    [SerializeField] private GameObject cardInDeck5;
+
 
 
 
@@ -60,25 +63,35 @@ public class PlayerDeck : MonoBehaviour
 
 
 
+        if (DeckSize < 35)
+        {
+            cardInDeck0.SetActive(false);
+        }
+        
         if (DeckSize < 30)
         {
             cardInDeck1.SetActive(false);
         }
         
-        if (DeckSize < 20)
+        if (DeckSize < 25)
         {
             cardInDeck2.SetActive(false);
         }
         
-        if (DeckSize < 5)
+        if (DeckSize < 20)
         {
             cardInDeck3.SetActive(false);
         }
-        
-        if (DeckSize < 1)
+        if (DeckSize < 10)
         {
             cardInDeck4.SetActive(false);
         }
+        if (DeckSize < 1)
+        {
+            cardInDeck5.SetActive(false);
+        }
+
+
 
         if (TurnSystem.startTurn == true)
         {
@@ -120,7 +133,7 @@ public class PlayerDeck : MonoBehaviour
 
 
 
-
+    //the shuffle is useless for now but will have a use once we implement item cards
 
     public void Shuffle()
     {

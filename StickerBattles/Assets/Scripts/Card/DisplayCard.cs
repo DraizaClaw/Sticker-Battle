@@ -105,7 +105,7 @@ public class DisplayCard : MonoBehaviour
 
 
 
-
+        //i may need to delete this
         Hand = GameObject.Find("Hand");
         if (this.transform.parent == Hand.transform.transform.parent)
         {
@@ -115,7 +115,7 @@ public class DisplayCard : MonoBehaviour
 
 
 
-        staticCardBack = cardBack;
+        staticCardBack = cardBack; // may or may not be nessesary
 
         if (this.tag == "Clone")
         {
