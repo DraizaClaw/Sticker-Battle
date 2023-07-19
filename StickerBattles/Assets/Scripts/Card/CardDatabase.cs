@@ -22,7 +22,7 @@ public class CardDatabase : MonoBehaviour
         cardlist.Add(new Card(9, 17, 3, 4, "Coool Gus", "Too coool", "Coool", "increases attack by 2 for 2 turns.", Resources.Load<Sprite>("Coool Gus")));
         cardlist.Add(new Card(10, 21, 2, 3, "The Love Magnet", "attracts anyone to him.", "we love you", "makes all cards against the user useless against this card for 2 turns.", Resources.Load<Sprite>("The Love Magnet")));
         cardlist.Add(new Card(11, 7, 9, 5, "BIG Foot", "Ugly and has giant feet", "BIGGER FEET", "makes any attack against this card useless for 1 turn.", Resources.Load<Sprite>("BIG Foot")));
-        cardlist.Add(new Card(12, 10, 6, 5, "Rizzler Dog", "Has an insane amount of rizz.", "Rizz time", "stunts 2 of any opponents cards for 2 turns", Resources.Load<Sprite>("BIG Foot")));
+        cardlist.Add(new Card(12, 10, 6, 5, "Rizzler Dog", "Has an insane amount of rizz.", "Rizz time", "stunts 2 of any opponents cards for 2 turns", Resources.Load<Sprite>("Rizzler Dog")));
         cardlist.Add(new Card(13, 15, 6, 2, "Scary Faris", "Too Terrifying", "Jumpscare", "makes opponent defence lower by 2 and magic doesnt work on him", Resources.Load<Sprite>("Scary Faris")));
         cardlist.Add(new Card(14, 10, 4, 15, "Defensive Faris", "Uses his stance as defensive mechanism", "THE STANCE", "heals HP by 4", Resources.Load<Sprite>("Defensive Faris")));
         cardlist.Add(new Card(15, 6, 11, 3, "SHHHH Man", "Shushs anything that crosses his path.", "Shuuush", "decreases all enemy cards AK damage by 1", Resources.Load<Sprite>("SHHHH Man")));

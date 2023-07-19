@@ -41,8 +41,8 @@ public class DisplayCard : MonoBehaviour
 
 
 
-    public GameObject Hand;
-    public int CardInDeck;
+    private GameObject Hand; //made it private when it was public
+    private int CardInDeck; //made it private when it was public
 
 
 

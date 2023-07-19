@@ -44,7 +44,7 @@ public class TurnSystem : MonoBehaviour
 
         manatext.text = ("Your mana is at ")+currentmana.ToString();
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E)) // testing purposes only
         {
             currentmana -= 1;
         }

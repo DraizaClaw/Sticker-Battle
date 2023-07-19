@@ -201,6 +201,8 @@ MonoBehaviour:
   magicdescriptiontext: {fileID: 8284645101767766170}
   artImage: {fileID: 8916685746585541257}
   cardBack: 0
+  Hand: {fileID: 0}
+  CardInDeck: 0
 --- !u!114 &3198608059606296553
 MonoBehaviour:
   m_ObjectHideFlags: 0
