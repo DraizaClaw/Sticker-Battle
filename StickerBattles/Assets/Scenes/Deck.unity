@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 537.8253, y: 21}
+  m_AnchoredPosition: {x: 537.8253, y: 183}
   m_SizeDelta: {x: -1144.224, y: -525.198}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &66473678
@@ -2307,7 +2307,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Your 'mana' is at 000
+  m_Text: Mana = 000
 --- !u!222 &1716177523
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2333,7 +2333,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1497.8, y: -138.05}
+  m_AnchoredPosition: {x: 368, y: -534}
   m_SizeDelta: {x: 697.347, y: 276.105}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &1764862559 stripped

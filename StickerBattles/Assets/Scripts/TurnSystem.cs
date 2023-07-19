@@ -44,9 +44,9 @@ public class TurnSystem : MonoBehaviour
             TurnText.text = ("Opponent Turn");
         }
 
-        manatext.text = ("Your mana is at ")+currentmana.ToString();
+        manatext.text = ("Mana = ")+currentmana.ToString();
 
-        if (Input.GetKeyDown(KeyCode.E)) // testing purposes only
+        if (Input.GetKeyDown(KeyCode.E) && currentmana > 0) // testing purposes only
         {
             currentmana -= 1;
         }
@@ -54,17 +54,25 @@ public class TurnSystem : MonoBehaviour
 
     public void EndYourTurn()
     {
-        IsYourTurn = false;
-        OpponentTurn += 1;
+        if (IsYourTurn == true)
+        {
+            IsYourTurn = false;
+            OpponentTurn += 1;
+        }
+        
     }
     public void EndOpponentTurn()
     {
-        IsYourTurn = true;
-        YourTurn += 1;
+        if (IsYourTurn == false)
+        {
+            IsYourTurn = true;
+            YourTurn += 1;
 
-        currentmana += 1;
+            currentmana += 1;
 
-        startTurn = true;
+            startTurn = true;
+        }
+        
     }
 
 }
