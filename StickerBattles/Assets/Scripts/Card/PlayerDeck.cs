@@ -7,30 +7,20 @@ public class PlayerDeck : MonoBehaviour
 {
     [Header("Stuff Mohsen Cannot Edit")]
 
-    [AddComponentMenu("You Cannot Edit This")]
-        public List<Card> container = new List<Card>();
+    public List<Card> container = new List<Card>();
 
 
-        public static int DeckSize; //Passed my is it worthy enough not to get deleted test
+    public static int DeckSize; //Passed my is it worthy enough not to get deleted test
 
 
-        private int x; //was pulic  now private,
+    private int x; //was pulic  now private,
 
 
-        public List<Card> deck = new List<Card>();
-
-
-
-        public static List<Card> staticdeck = new List<Card>();
+    public List<Card> deck = new List<Card>();
 
 
 
-
-
-
-        public GameObject CardToHand;
-        public GameObject[] Clones;
-        public GameObject Hand;
+    public static List<Card> staticdeck = new List<Card>();
 
 
 
@@ -41,14 +31,18 @@ public class PlayerDeck : MonoBehaviour
     [SerializeField] private GameObject cardInDeck4;
     [SerializeField] private GameObject cardInDeck5;
 
+
+
+
+    public GameObject CardToHand;
+    public GameObject[] Clones;
+    public GameObject Hand;
     [Header ("Stuff Mohsen Can Edit")]
-    [AddComponentMenu("You Can Edit This")]
+
+    [SerializeField] private int handcards;
 
 
-        [SerializeField] private int handcards;
-
-
-        [SerializeField] private Text DeckText;
+    [SerializeField] private Text DeckText;
 
     // Start is called before the first frame update
     void Start()
