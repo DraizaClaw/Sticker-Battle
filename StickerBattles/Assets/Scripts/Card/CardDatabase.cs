@@ -31,6 +31,7 @@ public class CardDatabase : MonoBehaviour
         cardlist.Add(new Card(18, 12, 5, 3, "The Deformed Man", "Too Deformed", "Confusion", "Confuses an enemy card", Resources.Load<Sprite>("The Deformed Man")   ));
         cardlist.Add(new Card(19, 14, 4, 2, "WAKE UP MAN", "WAKES UP WAAAKE UPPP", "DONT WAKE UP", "Makes an enemy card unusable for 2 turns", Resources.Load<Sprite>("WAKE UP MAN")    ));
         cardlist.Add(new Card(20, 5, 11, 4, "BUFF Caet", "Buffy caety caet", "BUFF", "increases the AK damage of any placed card on your deck", Resources.Load<Sprite>("BUFF Caet") ));
+        cardlist.Add(new Card(21, 0, 0,0, "Error", "You drew more cards than whats left in the deck", "Errorize", "Makes an error apear in the console", Resources.Load<Sprite>("Error Image") ));
 
 
 

@@ -1,14 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerDeck : MonoBehaviour
 {
-    public List<Card> container = new List<Card>();
-    public static int DeckSize;
-    private int x; //was pulic  now private, if error presits try making this public again
-    public List<Card> deck = new List<Card>();
-    public static List<Card> staticdeck = new List<Card>();
+    [Header("Stuff Mohsen Cannot Edit")]
+
+    [AddComponentMenu("You Cannot Edit This")]
+        public List<Card> container = new List<Card>();
+
+
+        public static int DeckSize; //Passed my is it worthy enough not to get deleted test
+
+
+        private int x; //was pulic  now private,
+
+
+        public List<Card> deck = new List<Card>();
+
+
+
+        public static List<Card> staticdeck = new List<Card>();
+
+
+
+
+
+
+        public GameObject CardToHand;
+        public GameObject[] Clones;
+        public GameObject Hand;
 
 
 
@@ -19,35 +41,31 @@ public class PlayerDeck : MonoBehaviour
     [SerializeField] private GameObject cardInDeck4;
     [SerializeField] private GameObject cardInDeck5;
 
+    [Header ("Stuff Mohsen Can Edit")]
+    [AddComponentMenu("You Can Edit This")]
 
 
-
-    public GameObject CardToHand;
-    public GameObject[] Clones;
-    public GameObject Hand;
+        [SerializeField] private int handcards;
 
 
-    [SerializeField] private int handcards;
-
-
-
+        [SerializeField] private Text DeckText;
 
     // Start is called before the first frame update
     void Start()
     {
         x = 0;
-        DeckSize = 40;
+        DeckSize = deck.Count;
         for (int i = 0; i < DeckSize; i++)
         {
             x = Random.Range(1, 20);
             deck[i] = CardDatabase.cardlist[x];
         }
-
+        //this for loop fills in the deck with random cards from our database
 
 
 
         StartCoroutine(StartGame());
-
+        //this draws on the first x cards
 
     }
 
@@ -59,8 +77,7 @@ public class PlayerDeck : MonoBehaviour
 
 
 
-
-
+        DeckText.text = DeckSize.ToString();
 
 
         if (DeckSize < 35)
@@ -119,18 +136,12 @@ public class PlayerDeck : MonoBehaviour
 
     IEnumerator StartGame()
     {
-        for (int i = 1; i < handcards + 1; i++) //code to control how many cards are in hand at the beggining of game 
+        for (int i = 0; i < handcards; i++) //code to control how many cards are in hand at the beggining of game //it was for(int i = 1; i < handcards + 1; i++)
         {
             yield return new WaitForSeconds(1);
-            //new //again for some reason
             Instantiate(CardToHand, transform.position, transform.rotation);
         }
     }
-
-
-
-
-
 
 
     //the shuffle is useless for now but will have a use once we implement item cards
@@ -145,6 +156,17 @@ public class PlayerDeck : MonoBehaviour
             deck[randomIndex] = container[0];
         }
     }
+
+
+
+    public void DrawCard(int x)
+    {
+        StartCoroutine(Draw(x));
+    }
+    //testing purposes but may implement it as a mechanic later
+
+
+
     IEnumerator Draw(int x)
     {
         for (int i = 0; i < x; i++)

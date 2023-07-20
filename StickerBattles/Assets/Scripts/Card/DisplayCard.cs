@@ -10,15 +10,15 @@ public class DisplayCard : MonoBehaviour
 
     public int displayId;
 
-    public int id;
-    public int health;
-    public int attack;
-    public int defence;
-    public string cardname;
-    public string carddescription;
-    public string magic;
-    public string magicdescription;
-    public Sprite spriteImage;
+//    private int id;
+    private int health;
+    private int attack;
+    private int defence;
+    private string cardname;
+    private string carddescription;
+    private string magic;
+    private string magicdescription;
+    private Sprite spriteImage;
 
 
     public Text healthtext;
@@ -42,7 +42,7 @@ public class DisplayCard : MonoBehaviour
 
 
     private GameObject Hand; //made it private when it was public
-    private int CardInDeck; //made it private when it was public
+    private int CardsInDeck; //made it private when it was public
 
 
 
@@ -56,7 +56,7 @@ public class DisplayCard : MonoBehaviour
     {
 
 
-        CardInDeck = PlayerDeck.DeckSize;
+        CardsInDeck = PlayerDeck.DeckSize;
 
 
 
@@ -82,7 +82,7 @@ public class DisplayCard : MonoBehaviour
 
 
 
-        id = Display_Card[0].id;
+//        id = Display_Card[0].id;
         health = Display_Card[0].health;
         attack = Display_Card[0].attack;
         defence = Display_Card[0].defence;
@@ -105,22 +105,13 @@ public class DisplayCard : MonoBehaviour
 
 
 
-        //i may need to delete this
-        Hand = GameObject.Find("Hand");
-        if (this.transform.parent == Hand.transform.transform.parent)
-        {
-            cardBack = false;
-        }
-
-
-
 
         staticCardBack = cardBack; // may or may not be nessesary
 
         if (this.tag == "Clone")
         {
-            Display_Card[0] = PlayerDeck.staticdeck[CardInDeck - 1];
-            CardInDeck -= 1;
+            Display_Card[0] = PlayerDeck.staticdeck[CardsInDeck - 1];
+            CardsInDeck -= 1;
             PlayerDeck.DeckSize -= 1;
             cardBack = false;
             this.tag = "Untagged";

@@ -5,12 +5,12 @@ using UnityEngine;
 public class CardToHand : MonoBehaviour
 {
 
-    [HideInInspector] public GameObject Hand; //in tutorial it wasnt hide and was public
-    public GameObject HandCard;
+    private GameObject Hand; //in tutorial it wasnt hide and was public
+    [SerializeField] private GameObject HandCard;
 
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         Hand = GameObject.Find("Hand");
         HandCard.transform.SetParent(Hand.transform);
