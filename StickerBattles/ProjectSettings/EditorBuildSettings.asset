@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: fa751423b4c248a4dba7993ba5a0727c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Settings.unity
     guid: cabf052b6b3871d48bb31aaffd99e906
+  - enabled: 1
+    path: Assets/Scenes/Deck.unity
+    guid: 6ebab154ad948a44ca28b36697c3152b
   m_configObjects: {}
