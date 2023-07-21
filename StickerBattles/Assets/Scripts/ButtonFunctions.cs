@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
-public class ButtonFunctions : MonoBehaviour
+public class ButtonFunctions : MonoBehaviour // its mine so it passes automatically
 {
     //
 

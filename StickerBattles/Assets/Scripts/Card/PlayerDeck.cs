@@ -10,7 +10,7 @@ public class PlayerDeck : MonoBehaviour
     public List<Card> container = new List<Card>();
 
 
-    public static int DeckSize; //Passed my is it worthy enough not to get deleted test
+    public static int DeckSize; //Passed my 'is it worthy enough not to get deleted test'
 
 
     private int x; //was pulic  now private,
@@ -24,20 +24,33 @@ public class PlayerDeck : MonoBehaviour
 
 
 
+
+
+
+    // remind me to change the name
+
+    public GameObject CardToHand; 
+
+    public GameObject[] Clones;
+
+    public GameObject Hand;
+
+
+
+
+
+
+
+    [Header ("Stuff Mohsen Can Edit")]
+
+
+
     [SerializeField] private GameObject cardInDeck0;
     [SerializeField] private GameObject cardInDeck1;
     [SerializeField] private GameObject cardInDeck2;
     [SerializeField] private GameObject cardInDeck3;
     [SerializeField] private GameObject cardInDeck4;
     [SerializeField] private GameObject cardInDeck5;
-
-
-
-
-    public GameObject CardToHand;
-    public GameObject[] Clones;
-    public GameObject Hand;
-    [Header ("Stuff Mohsen Can Edit")]
 
     [SerializeField] private int handcards;
 
@@ -133,7 +146,8 @@ public class PlayerDeck : MonoBehaviour
         for (int i = 0; i < handcards; i++) //code to control how many cards are in hand at the beggining of game //it was for(int i = 1; i < handcards + 1; i++)
         {
             yield return new WaitForSeconds(1);
-            Instantiate(CardToHand, transform.position, transform.rotation);
+            GameObject card = Instantiate(CardToHand, transform.position, transform.rotation);
+            card.transform.SetParent(Hand.transform, false);
         }
     }
 
@@ -166,7 +180,8 @@ public class PlayerDeck : MonoBehaviour
         for (int i = 0; i < x; i++)
         {
             yield return new WaitForSeconds(1);
-            Instantiate(CardToHand, transform.position, transform.rotation);
+            GameObject card = Instantiate(CardToHand, transform.position, transform.rotation);
+            card.transform.SetParent(Hand.transform, false);
         }
     }
 }
