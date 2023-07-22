@@ -23,7 +23,7 @@ public class ButtonFunctions : MonoBehaviour // its mine so it passes automatica
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("Deck");
+        SceneManager.LoadScene("Lobby");
     }
 
 
