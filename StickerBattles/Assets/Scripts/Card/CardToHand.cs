@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CardToHand : MonoBehaviour
+public class CardToHand : MonoBehaviour //this script passes my 'is it worthy enough not to get deleted' test // this script will be re-evaluated // may be removed
 {
 
     private GameObject Hand; //in tutorial it wasnt hide and was public
@@ -12,11 +12,13 @@ public class CardToHand : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+
+        /*
         Hand = GameObject.Find("Hand");
         HandCard.transform.SetParent(Hand.transform);
         HandCard.transform.localScale = Vector3.one;
         HandCard.transform.position = new Vector3(transform.position.x, transform.position.y, -48);
         HandCard.transform.eulerAngles = new Vector3(25,0,0);
-
+        */
     }
 }

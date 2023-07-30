@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
-public class ButtonFunctions : MonoBehaviour
+public class ButtonFunctions : MonoBehaviour // its mine so it passes automatically
 {
     //
 
@@ -18,6 +18,12 @@ public class ButtonFunctions : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene("Main Menu");
+    }
+
+
+    public void PlayGame()
+    {
+        SceneManager.LoadScene("Lobby");
     }
 
 
