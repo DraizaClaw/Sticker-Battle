@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Photon.Pun;
 public class DragDrop : MonoBehaviour
 {
     //includes drag and drop system for cards
@@ -21,13 +22,14 @@ public class DragDrop : MonoBehaviour
 
     private bool IsOverDropZone;
 
+    PhotonView view;
 
 
 
 
     private void Start()
     {
-        
+        view = GetComponent<PhotonView>();
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -51,12 +53,16 @@ public class DragDrop : MonoBehaviour
 
     private void Update()
     {
-        if (IsDragging) //if 'isdragging == true' can be writtten like this because it is a bool. we can leave it as is or make it == true
+        if (view.IsMine)
         {
-            transform.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-            transform.SetParent(GameObject.Find("Canvas").transform, true);
+            if (IsDragging) //if 'isdragging == true' can be writtten like this because it is a bool. we can leave it as is or make it == true
+            {
+                transform.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+                transform.SetParent(GameObject.Find("Canvas").transform, true);
 
+            }
         }
+        
     }
 
 

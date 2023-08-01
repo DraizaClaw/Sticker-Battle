@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
 
-public class PlayerDeck : MonoBehaviour
+public class PlayerDeck : MonoBehaviourPunCallbacks
 {
     [Header("Stuff Mohsen Cannot Edit")]
 
@@ -22,7 +23,7 @@ public class PlayerDeck : MonoBehaviour
 
     public static List<Card> staticdeck = new List<Card>();
 
-
+    public GameObject CardPrefab;
 
 
 
@@ -146,7 +147,10 @@ public class PlayerDeck : MonoBehaviour
         for (int i = 0; i < handcards; i++) //code to control how many cards are in hand at the beggining of game //it was for(int i = 1; i < handcards + 1; i++)
         {
             yield return new WaitForSeconds(1);
-            GameObject card = Instantiate(CardToHand, transform.position, transform.rotation);
+
+            GameObject card = PhotonNetwork.Instantiate(CardPrefab.name, transform.position, Quaternion.identity);
+
+            //GameObject card = Instantiate(CardToHand, transform.position, transform.rotation);
             card.transform.SetParent(Hand.transform, false);
         }
     }
@@ -180,7 +184,10 @@ public class PlayerDeck : MonoBehaviour
         for (int i = 0; i < x; i++)
         {
             yield return new WaitForSeconds(1);
-            GameObject card = Instantiate(CardToHand, transform.position, transform.rotation);
+
+            GameObject card = PhotonNetwork.Instantiate(CardPrefab.name, transform.position, transform.rotation);
+
+            //GameObject card = Instantiate(CardToHand, transform.position, transform.rotation);
             card.transform.SetParent(Hand.transform, false);
         }
     }
