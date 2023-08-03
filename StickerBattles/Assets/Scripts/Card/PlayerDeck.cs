@@ -32,7 +32,7 @@ public class PlayerDeck : MonoBehaviourPunCallbacks
 
     public GameObject CardToHand; 
 
-    public GameObject[] Clones;
+    //public GameObject[] Clones; // this usseless ?????????
 
     public GameObject Hand;
 
@@ -61,6 +61,15 @@ public class PlayerDeck : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
+
+        Hand = GameObject.Find("Hand");
+
+
+
+
+
+
+
         x = 0;
         DeckSize = deck.Count;
         for (int i = 0; i < DeckSize; i++)
@@ -185,9 +194,10 @@ public class PlayerDeck : MonoBehaviourPunCallbacks
         {
             yield return new WaitForSeconds(1);
 
-            //GameObject card = PhotonNetwork.Instantiate(CardPrefab.name, transform.position, transform.rotation);
+            GameObject card = PhotonNetwork.Instantiate(CardPrefab.name, transform.position, transform.rotation);
 
-            GameObject card = Instantiate(CardToHand, transform.position, transform.rotation);
+
+            //GameObject card = Instantiate(CardToHand, transform.position, transform.rotation);
             card.transform.SetParent(Hand.transform, false);
         }
     }

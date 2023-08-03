@@ -55,7 +55,7 @@ public class DragDrop : MonoBehaviour
     {
         if (view.IsMine)
         {
-            if (IsDragging) //if 'isdragging == true' can be writtten like this because it is a bool. we can leave it as is or make it == true
+            if (IsDragging) //if 'isdragging == true' can be writtten like this because it is a bool. we can leave it as is or add "== true"
             {
                 transform.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
                 transform.SetParent(GameObject.Find("Canvas").transform, true);
@@ -81,12 +81,15 @@ public class DragDrop : MonoBehaviour
         if (IsOverDropZone)
         {
             transform.SetParent(DropZone.transform, false);
+            //GetComponent<PhotonTransformViewClassic>().transform.SetParent(DropZone.transform);
+
         }
         else
         {
             transform.position = StartPosition;
             transform.SetParent(StartParent.transform, false);
         }
+        
 
 
 
