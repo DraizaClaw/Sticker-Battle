@@ -209,7 +209,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85243ae914695204fb4957371534d74c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HandCard: {fileID: 215986763953085991}
 --- !u!114 &6930339933799627870
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -78,7 +78,7 @@ public class DragDrop : MonoBehaviour
     }
     public void EndDrag()
     {
-        if (IsOverDropZone)
+        if (IsOverDropZone && DropZone.transform.childCount == 0)//if ur over dropzone and said dropzone has no children //done
         {
             transform.SetParent(DropZone.transform, false);
             //GetComponent<PhotonTransformViewClassic>().transform.SetParent(DropZone.transform);
