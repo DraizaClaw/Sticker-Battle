@@ -1595,7 +1595,7 @@ GameObject:
   - component: {fileID: 485606326}
   - component: {fileID: 485606325}
   - component: {fileID: 485606324}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Opp Attack Zone 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3112,7 +3112,7 @@ GameObject:
   - component: {fileID: 936678392}
   - component: {fileID: 936678391}
   - component: {fileID: 936678390}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Opp Attack Zone 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4023,7 +4023,7 @@ GameObject:
   - component: {fileID: 1331953402}
   - component: {fileID: 1331953401}
   - component: {fileID: 1331953400}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Opp Attack Zone 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4230,7 +4230,7 @@ GameObject:
   - component: {fileID: 1350501170}
   - component: {fileID: 1350501169}
   - component: {fileID: 1350501168}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Opp Attack Zone 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
