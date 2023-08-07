@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class CardToHand : MonoBehaviour //this script passes my 'is it worthy enough not to get deleted' test // this script will be re-evaluated // may be removed //implemented diffferent function than original purpose
+public class CardToHand : MonoBehaviour //this script passes my 'is it worthy enough not to get deleted' test // this script will be re-evaluated // may be removed //implemented diffferent function than original purpose//but its mine so won't get deleted
 {
     /*
     private GameObject Hand; //in tutorial it wasnt hide and was public
@@ -23,7 +23,11 @@ public class CardToHand : MonoBehaviour //this script passes my 'is it worthy en
         
         }
     */
-    
+
+
+    [SerializeField] private GameObject cardback;
+
+
     private void Awake()
     {
         if (GetComponent<PhotonView>().IsMine)
@@ -33,6 +37,18 @@ public class CardToHand : MonoBehaviour //this script passes my 'is it worthy en
         else
         {
             this.transform.SetParent(GameObject.Find("Opp Hand").transform);
+        }
+    }
+
+    private void Update()
+    {
+        if (GetComponent<PhotonView>().IsMine == false || this.transform.parent == GameObject.Find("Opp Hand").gameObject)
+        {//if card is in opponent hand
+            cardback.SetActive(true);
+        }//you do not see his card
+        else
+        {
+            cardback.SetActive(false);
         }
     }
 
